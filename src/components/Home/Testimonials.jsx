@@ -19,7 +19,7 @@ const TestimonialsProps = ({ content, user, place }) => {
 
 export const Testimonials = () => {
   return (
-    <div className="h-fit mt-[5vh] w-full bg-teal-50 py-8">
+    <div className="h-fit mt-[5vh] w-full  py-8">
       <div className="w-[90%] mx-auto xl:w-3/4 flex flex-col gap-4">
         <h3 className="md:text-[35px] text-[25px] text-center font-semibold ">
           Our <span className="text-teal-700">Happy</span> Customer's
