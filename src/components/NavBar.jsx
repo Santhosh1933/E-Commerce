@@ -15,14 +15,17 @@ import {
   AbsoluteCenter,
 } from "@chakra-ui/react";
 import React from "react";
-import { useNavigate, useNavigation } from "react-router-dom";
+import { useLocation, useNavigate, useNavigation } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { IoIosCart } from "react-icons/io";
+import logo from "../assets/homePageImg.png";
 
 export function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const btnRef = React.useRef();
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log(location);
   const navBarItems = [
     {
       name: "Home",
@@ -39,12 +42,21 @@ export function NavBar() {
       {/* <Button ref={btnRef} colorScheme="teal" onClick={onOpen}>
         Open
       </Button> */}
-      <nav className="w-full h-[10vh] bg-[#a1df49] flex items-center justify-around fixed">
-        <div>Shop</div>
+      <nav className="w-full h-[10vh] bg-green-200 z-50 flex items-center justify-around sticky top-0">
+        <div>
+          <img
+            src={logo}
+            alt=""
+            className="w-[70px] h-[70px] object-cover p-2"
+          />
+        </div>
         <div className="flex gap-4 items-center">
           <div className="sm:flex hidden gap-4">
             {navBarItems.map((data, i) => (
-              <p onClick={data.navigate} className="cursor-pointer">
+              <p
+                onClick={data.navigate}
+                className="cursor-pointer underline underline-offset-4 font-medium"
+              >
                 {data.name}
               </p>
             ))}
@@ -71,7 +83,13 @@ export function NavBar() {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Shop</DrawerHeader>
+          <DrawerHeader>
+            <img
+              src={logo}
+              alt=""
+              className="w-[150px] h-[150px] object-cover p-2"
+            />
+          </DrawerHeader>
 
           <DrawerBody>
             <div className="">
@@ -82,7 +100,7 @@ export function NavBar() {
                     onClick={data.navigate}
                     bg="white"
                     px="2"
-                    className="cursor-pointer"
+                    className="cursor-pointer font-medium"
                   >
                     {data.name}
                   </AbsoluteCenter>
