@@ -5,6 +5,7 @@ import { BannerFeature } from "./BannerFeature";
 import { HeroSession } from "./HeroSession";
 import { Testimonials } from "./Testimonials";
 import { PopularProduct } from "./PopularProduct";
+import { Footer } from "../Footer";
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
       <HeroSession />
       <PopularProduct />
       <Testimonials />
+      <Footer />
     </div>
   );
 };
