@@ -7,6 +7,7 @@ export const ProductProp = ({
   price,
   discount = null,
   description,
+  productPage = null,
 }) => {
   const toast = useToast();
 
@@ -22,13 +23,23 @@ export const ProductProp = ({
       }}
       className="p-2 cursor-pointer w-full min-h-[250px] bg-green-100/[.30] h-fit rounded-lg border-2 border-teal-800 flex flex-col justify-center items-center "
     >
-      <img src={img} alt="" className="h-[150px] w-[150px] object-cover" />
+      <img
+        src={img}
+        alt=""
+        className="h-[100px] w-[100px] sm:w-[150px] sm:h-[150px] object-cover"
+      />
       <div className="flex flex-col gap-2  items-center w-full">
         <h2 className="text-lg font-semibold line-clamp-2">{title}</h2>
-        <description className=" text-justify line-clamp-2">
+        <description
+          className={
+            productPage
+              ? "hidden text-justify sm:line-clamp-2"
+              : " text-justify line-clamp-2"
+          }
+        >
           {description}
         </description>
-        <div className="flex-col gap-2 flex md:flex-row justify-between w-[80%] items-center flex-wrap ">
+        <div className="flex-col gap-2 flex md:flex-row justify-between sm:w-[80%] items-center flex-wrap ">
           <p className="font-medium text-teal-800">Rs.{price}/kg</p>
           <button
             onClick={() => {
@@ -50,7 +61,11 @@ export const ProductProp = ({
                 },
               });
             }}
-            className="py-2 rounded-md hover:ring-teal-800 hover:ring-2 transition-all flex items-center gap-2 px-4 w-full md:w-fit justify-center text-white bg-teal-700"
+            className={
+              productPage
+                ? "py-2 rounded-md text-sm sm:text-md hover:ring-teal-800 hover:ring-2 transition-all flex items-center gap-2 sm:px-4 px-2 w-full md:w-fit justify-center text-white bg-teal-700"
+                : "py-2 rounded-md  hover:ring-teal-800 hover:ring-2 transition-all flex items-center gap-2 sm:px-4 px-2 w-full md:w-fit justify-center text-white bg-teal-700"
+            }
           >
             Add To Cart
             <FaBagShopping />
