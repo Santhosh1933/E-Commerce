@@ -13,6 +13,7 @@ import { FaBagShopping } from "react-icons/fa6";
 import { ProductOuterLayerProp } from "../ProductOuterLayerProp";
 import { ProductProp } from "../ProductProp";
 import { Footer } from "../Footer";
+import { ProductOuterLayerPropMobile } from "../ProductOuterLayerPropMobile";
 
 export const Product = () => {
   const param = atob(useParams()?.productId);
@@ -159,53 +160,58 @@ export const Product = () => {
           <p className="text-2xl font-semibold mx-auto w-[95%]">
             Similar Products :
           </p>
-          <ProductOuterLayerProp>
-            <ProductProp
-              title="Beans"
-              img={homePageImg}
-              price={30}
-              discount={5}
-              description={
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
-              }
-            />
-            <ProductProp
-              title="Beans"
-              img={homePageImg}
-              price={30}
-              discount={5}
-              description={
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
-              }
-            />
-            <ProductProp
-              title="Beans"
-              img={homePageImg}
-              price={30}
-              discount={5}
-              description={
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
-              }
-            />
-            <ProductProp
-              title="Beans"
-              img={homePageImg}
-              price={30}
-              discount={5}
-              description={
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
-              }
-            />
-            <ProductProp
-              title="Beans"
-              img={homePageImg}
-              price={30}
-              discount={5}
-              description={
-                " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
-              }
-            />
-          </ProductOuterLayerProp>
+          <ProductOuterLayerPropMobile>
+          <ProductProp
+            title="Beans"
+            img={homePageImg}
+            price={30}
+            discount={5}
+            description={
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
+            }
+            productPage={true}
+          />
+          <ProductProp
+            title="Beans"
+            img={homePageImg}
+            price={30}
+            discount={5}
+            description={
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
+            }
+            productPage={true}
+          />
+          <ProductProp
+            title="Beans"
+            img={homePageImg}
+            price={30}
+            discount={5}
+            description={
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
+            }
+            productPage={true}
+          />
+          <ProductProp
+            title="Beans"
+            img={homePageImg}
+            price={30}
+            discount={5}
+            description={
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
+            }
+            productPage={true}
+          />
+          <ProductProp
+            title="Beans"
+            img={homePageImg}
+            price={30}
+            discount={5}
+            description={
+              " Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos aperiam laborum odit voluptatum excepturi quod!"
+            }
+            productPage={true}
+          />
+        </ProductOuterLayerPropMobile>
         </div>
       </section>
       <Footer />
