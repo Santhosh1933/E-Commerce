@@ -156,7 +156,6 @@ export const CheckOut = () => {
           placement="bottom"
           onClose={onClose}
           finalFocusRef={btnRef}
-          size={"full"}
         >
           <DrawerOverlay />
           <DrawerContent>

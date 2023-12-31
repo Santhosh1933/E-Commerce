@@ -7,6 +7,8 @@ import { Product } from "./components/Shop/Product";
 import { PageNotFound } from "./components/PageNotFound";
 import { Cart } from "./components/Cart/Cart";
 import { CheckOut } from "./components/CheckOut/CheckOut";
+import { Login } from "./components/Auth/Login";
+import { Register } from "./components/Auth/Register";
 export default function App() {
   return (
     <BrowserRouter>
@@ -16,6 +18,9 @@ export default function App() {
         <Route element={<Product />} path="/shop/:productId" />
         <Route element={<Cart />} path="/cart" />
         <Route element={<CheckOut />} path="/checkout" />
+        <Route element={<Login />} path="/login" />
+        <Route element={<Register />} path="/register" />
+
         <Route element={<PageNotFound />} path="*" />
       </Routes>
     </BrowserRouter>
