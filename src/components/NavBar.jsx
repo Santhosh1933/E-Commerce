@@ -25,7 +25,6 @@ export function NavBar() {
   const btnRef = React.useRef();
   const navigate = useNavigate();
   const location = useLocation();
-  console.log(location);
   const navBarItems = [
     {
       name: "Home",
@@ -54,6 +53,7 @@ export function NavBar() {
           <div className="sm:flex hidden gap-4">
             {navBarItems.map((data, i) => (
               <p
+              key={i}
                 onClick={data.navigate}
                 className="cursor-pointer underline underline-offset-4 font-medium"
               >

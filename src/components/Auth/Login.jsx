@@ -36,6 +36,7 @@ export const Login = () => {
         const result = await res.json();
         console.log(result);
         localStorage.setItem("token", result.token);
+        navigate("/")
         toast.close(loadingToastId);
         toast({
           title: "Login Successful",
