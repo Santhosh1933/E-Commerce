@@ -5,8 +5,8 @@ import "./index.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { jwtDecode } from "jwt-decode";
 
-const token = localStorage.getItem("token") || "";
-console.log(jwtDecode(token));
+const token = localStorage.getItem("token") || null;
+console.log(token&&jwtDecode(token));
 
 
 ReactDOM.createRoot(document.getElementById("root")).render(
